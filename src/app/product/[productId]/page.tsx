@@ -1,12 +1,20 @@
 import React from 'react'
 
 // just for typescript "define type of arg of params"
-interface PrdouctDetailsProps {
-    params:{
-        productId:String
+interface productDetailsProps {
+    params: {
+        productId: String
     }
 }
-const PrdouctDetails = ({params}:PrdouctDetailsProps) => {
+// generate dynamic metadata 
+
+export async function generateMetadata({ params }: productDetailsProps) {
+    return {
+        title: `product ${params.productId}`,
+    }
+}
+
+const PrdouctDetails = ({ params }: productDetailsProps) => {
     return (
         <div>PrdouctDetails {params.productId}</div>
     )
