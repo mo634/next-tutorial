@@ -6,13 +6,13 @@ interface productDetailsProps {
         productId: String
     }
 }
-// generate dynamic metadata 
 
-export async function generateMetadata({ params }: productDetailsProps) {
-    return {
-        title: `product ${params.productId}`,
+export const metadata = {
+    title: {
+        absolute: "this is product page"
     }
 }
+
 
 const PrdouctDetails = ({ params }: productDetailsProps) => {
     return (
