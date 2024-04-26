@@ -1,3 +1,5 @@
+import Header from "./components/Header"
+
 export const metadata = {
   title: {
     
@@ -16,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
 
       <body>
-        <header>Header </header>
+        <Header/>
         {children}
         <footer>footer</footer>
         </body>
