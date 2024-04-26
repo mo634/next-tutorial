@@ -19,7 +19,7 @@ const Header = () => {
         href: "/blog"
     }
 
-    ]
+    ] 
 
     const pathname = usePathname()
     console.log(pathname)
